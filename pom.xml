@@ -4,6 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <repositories>
+
+        <repository>
+            <id>confluent</id>
+            <url>https://packages.confluent.io/maven/</url>
+        </repository>
+
+    </repositories>
+
     <parent>
         <groupId>io.confluent</groupId>
         <artifactId>common</artifactId>
@@ -44,7 +53,7 @@
         <ubi.iputils.version>20180629-7.el8</ubi.iputils.version>
         <ubi.hostname.version>3.20-6.el8</ubi.hostname.version>
         <!-- ZULU OpenJDK Package Version -->
-        <ubi.zulu.openjdk.version>11.0.14</ubi.zulu.openjdk.version>
+        <ubi.zulu.openjdk.version>17</ubi.zulu.openjdk.version>
         <!-- Python Module Versions -->
         <ubi.python.pip.version>21.*</ubi.python.pip.version>
         <ubi.python.setuptools.version>54.*</ubi.python.setuptools.version>

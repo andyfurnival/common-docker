@@ -35,3 +35,10 @@ To build SNAPSHOT images, configure `.m2/settings.xml` for SNAPSHOT dependencies
 ```
 mvn clean package -Pdocker -DskipTests # Build local images
 ```
+
+
+Manual Docker Build
+```
+docker build -f Dockerfile.ubi8 --build-arg OPENSSL_VERSION='-1.1.1k-5.el8_5' --build-arg WGET_VERSION='-1.19.5-10.el8' --build-arg NETCAT_VERSION='-7.70-6.el8' --build-arg PYTHON36_VERSION='-3.6.8-38.module+el8.5.0+12207+5c5719bc' --build-arg TAR_VERSION='-1.30-5.el8' --build-arg PROCPS_VERSION='-3.3.15-6.el8' --build-arg KRB5_WORKSTATION_VERSION='-1.18.2-14.el8' --build-arg IPUTILS_VERSION='-20180629-7.el8' --build-arg HOSTNAME_VERSION='-3.20-6.el8' --build-arg ZULU_OPENJDK_VERSION='17' --build-arg PYTHON_PIP_VERSION='==21.*' --build-arg PYTHON_SETUPTOOLS_VERSION='==54.*' --build-arg ARTIFACT_ID='cp-base-new' --build-arg PROJECT_VERSION='7.0.1' -t confluent/cp-base-new .
+
+```
